@@ -53,7 +53,7 @@ exports.RefreshToken = function (token, callback) {
    });
 };
 
-exports.SendVerification = function(token){
+exports.SendVerification = function(token, callback){
     /*
     curl 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/getOobConfirmationCode?key=[API_KEY]' \
     -H 'Content-Type: application/json' \
@@ -106,7 +106,7 @@ exports.SignUp = function(email, password, callback) {
    });
 };
 
-exports.GetUserData = function(token){
+exports.GetUserData = function(token, callback){
     /*
     curl 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/getAccountInfo?key=[API_KEY]' \
     -H 'Content-Type: application/json' --data-binary '{"idToken":"[FIREBASE_ID_TOKEN]"}'
@@ -130,7 +130,7 @@ exports.GetUserData = function(token){
    });
 };
 
-exports.SendResetPassword = function(email){
+exports.SendResetPassword = function(email, callback){
     /*
     curl 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/getOobConfirmationCode?key=[API_KEY]' \
     -H 'Content-Type: application/json' \
@@ -156,7 +156,7 @@ exports.SendResetPassword = function(email){
    });
 };
 
-exports.UpdateUserData = function(token, displayName, photoUrl){
+exports.UpdateUserData = function(token, displayName, photoUrl, callback){
     /*
     curl 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/setAccountInfo?key=[API_KEY]' \
     -H 'Content-Type: application/json' \
@@ -190,7 +190,7 @@ exports.UpdateUserData = function(token, displayName, photoUrl){
    });
 };
 
-exports.DeleteAccount = function(token){
+exports.DeleteAccount = function(token, callback){
     /*
     curl 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/deleteAccount?key=[API_KEY]' \
     -H 'Content-Type: application/json' --data-binary '{"idToken":"[FIREBASE_ID_TOKEN]"}'
