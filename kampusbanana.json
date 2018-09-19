@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "kampusbanana",
+  "private_key_id": "248d6c421e3dd1e152cbbcbfa975106ea8e08514",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCkZbi+EaS0g/5K\n5NqVkTGL8sIRA6nXZTc9VYK8QieQz85cQiMpTQ3E8kx6zMOmWmozVV03yErdbl6F\nfyC1lBvtPZVlMcbnvFcFuCfY/bCZmTbr3YJ3bDtpRw6NMGrk0dbhB9AEjS8eQ3dS\nVoXP0yj7Ed3zgnMWFdVoxX07R42nOojTkSnz+M5p+4y69O7pR/NPr96KV1TsImYl\n5rR4Oc0twFbUAr5U2HgxOW1kKn0re0KzOqoPibJvsGiUUpsgADpvVxB44e9BSmEi\nQQ311gO0dOB9Z+R31psmMo18mUu1l1r+N1r/8v8p+qGEGiMJ9gap2DwZZttpOBUw\n51vvK8mzAgMBAAECggEAE6qXjyVNLssbgJogDARyiOthi+eESeAx24R/P0YqtYgm\nh6Lh0e8F1qmlvIsCXMQ0MC/mFuY/Dn5FkHLE1vQA40CavqBVyyMcxfJh0fOHTNin\nWVAGa4LnGJEHjJxeLUFtEz58BA9fs58ehxsSpun73Q0mIBta6SlzfjUh5hWJPJfy\nnz5Uq/rPcnhPC3tCkXZkUrKGcTNob3e0NJ+FCWOSySfamNTI5WQkKMNxFAVqexXp\nGXQkO+UMiZAhq83SK7KTA8O6Y8HlXkYgRO1CtIvIHrgMdj0zcnVMxdnKasrqE85d\n1zSrHdzLqk6Pe8YuxG0RIU7nv/qfgWoaqrAa0E/LAQKBgQDl7hvrEA+l1Tnj+66s\nCW+votkHhEEP57VlD1+IhldGZqTetOSqYpLHCEPcim3KPFjx4hrTIhpeZq/i8/H4\nyxBsK4rVKoGJ3OdnPsygLQreHJEWXHDvaGjBoEWwvjfsvrQKW2SRWT3ymOtap1rT\nkupFTvOp/ivKajfS9Gse07TylQKBgQC3CXnR4lw/Ipv+ThbINLYdwxS2gqFy5h6E\nV7ZmKxK3eOo8ij1eUwWkMyj3h4Akz8Y6X1IR9oks5ZWTV8YOKvxi9LAUZofN4Fqq\nHYb84FpoH7iVatY/yBcl9YPXXpkdLXgov3nlQiN/RgP8Vkr7htr8ceEj5/QHuK3W\n+k4VYzdBJwKBgQCrErsw7NVHpFsbNnJiy+6ONlLV1d/2roZ3N7XzxUiAN/SpQtvz\nrb3ZWlvrZg+D7dybs4gT2QbXf/2Tlb9ORf/lC4yTR7nz0ilV1xK2hmzUj1qf0Y2x\ngvSWQ+I2O4Euo0Efh5pOzqBZtM8/ts7MJj4p7TE8JMF+LAN28KYW3Jt/9QKBgGCJ\n6OygXVMXZ/tbKHz0AFH2QIh6obi+Ur4unQ+KDFckuTaxGukTFNij+ymDGD1SMRU8\njUbYJ0W82YVbOCTk2zU+JVi9M0eM24T6CeZ6VnSwtmRocxQ07rCgq6b+R/exsbyc\nMSiQF7TbMuL2iJndaMbZMYwEnRstdtL6NhDlwZDlAoGBAK7dDgGJw5GZXwUNtqLj\npx5mRIgr4/uACusaTP91nT+mT4nFhDcIE5fJ16y7LDiyHJdmbdsdf4pTyFMMB0VK\na6/KUcUQcGAPGdEZjVIanLGCQslDsWV0AwxpD1ZJUYJuoKxhyNwWozZg70qCfIYk\n7yt0HqBdpIKP10Cqbe3vLtCq\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-cfjq9@kampusbanana.iam.gserviceaccount.com",
+  "client_id": "109334871366768712922",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-cfjq9%40kampusbanana.iam.gserviceaccount.com"
+}
