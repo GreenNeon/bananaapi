@@ -61,7 +61,7 @@ router.post('/profile', upload.single('avatar'), function (req, res, next) {
 
   return res.json({
     'success': 'File uploaded sucessfully!.',
-    'name': req.file.filename
+    'name': req.file.filename,
     'folder': req.file.destination
   });
 });
