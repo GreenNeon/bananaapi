@@ -4,10 +4,15 @@ var Login = require('../controllers/Login.js');
 var multer = require('multer');
 
 var admin = require('firebase-admin');
+var fs = require('fs');
+
+if(!fs.existsSync(appRoot + '/public/uploads/')){
+  fs.mkdir(appRoot + '/public/uploads/');
+}
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, __dirname + '/public/uploads/');
+    cb(null, appRoot + '/public/uploads/');
   },
   filename: function (req, file, cb) {
     var fileObj = {
