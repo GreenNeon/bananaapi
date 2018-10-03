@@ -2,7 +2,10 @@ var express = require('express');
 var router = express.Router();
 var Login = require('../controllers/Login.js');
 var multer = require('multer');
-var upload = multer({ dest: 'uploads/' });
+var upload = multer({
+  dest: __dirname + '../public/uploads/',
+  limits: { fileSize: 1000000, files: 1 }
+});
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
@@ -52,11 +55,14 @@ router.post('/getuser', function (req, res, next) {
 });
 
 router.post('/profile', upload.single('avatar'), function (req, res, next) {
-  if (req.file) {
-    return res.json({'error':'error uploading ..'});
+  if (!req.file) {
+    return res.json({ 'error': 'error uploading ..' });
   }
 
-  return res.json({'success':'File uploaded sucessfully!.'});
+  return res.json({
+    'success': 'File uploaded sucessfully!.',
+    'folder': req.file.path
+  });
 });
 
 module.exports = router;
