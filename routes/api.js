@@ -3,6 +3,8 @@ var router = express.Router();
 var Login = require('../controllers/Login.js');
 var multer = require('multer');
 
+var admin = require('firebase-admin');
+
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, appRoot + '/public/uploads/');
@@ -74,15 +76,29 @@ router.post('/getuser', function (req, res, next) {
 });
 
 router.post('/profile', upload.single('avatar'), function (req, res, next) {
-  if (!req.file) {
+  if (!req.file || !req.body.uid) {
     return res.json({ 'error': 'error uploading ..' });
   }
+  admin.auth().updateUser(req.body.uid, {
+    photoURL: "https://kampusbanana.herokuapp.com/uploads/" + req.file.filename,
+  })
+    .then(function(userRecord) {
+      // See the UserRecord reference doc for the contents of userRecord.
+      console.log("Successfully updated user", userRecord.toJSON());
+      return res.json({
+        'success': 'File uploaded sucessfully!.',
+        'name': req.file.filename,
+        'folder': req.file.destination,
+      });
+    })
+    .catch(function(error) {
+      console.log("Error updating user:", error);
+      return res.json({
+        'error': 'File uploaded sucessfully! But ERROR!!.',
+        'data': error
+      });
+    });
 
-  return res.json({
-    'success': 'File uploaded sucessfully!.',
-    'name': req.file.filename,
-    'folder': req.file.destination
-  });
 });
 
 module.exports = router;
