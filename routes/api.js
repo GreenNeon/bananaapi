@@ -52,7 +52,7 @@ router.post('/getuser', function (req, res, next) {
 });
 
 router.post('/profile', upload.single('avatar'), function (req, res, next) {
-  if (err) {
+  if (req.file) {
     return res.json({'error':'error uploading ..'});
   }
 
