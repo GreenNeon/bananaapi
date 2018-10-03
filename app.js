@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+global.appRoot = path.resolve(__dirname);
 
 var cors = require('cors');
 var admin = require('firebase-admin');

@@ -2,8 +2,27 @@ var express = require('express');
 var router = express.Router();
 var Login = require('../controllers/Login.js');
 var multer = require('multer');
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, appRoot + '/public/uploads/');
+  },
+  filename: function (req, file, cb) {
+    var fileObj = {
+      "image/png": ".png",
+      "image/jpeg": ".jpeg",
+      "image/jpg": ".jpg"
+    };
+    if (fileObj[file.mimetype] == undefined) {
+      cb(null, file.fieldname + '-' + Date.now());
+    } else {
+      cb(null, file.fieldname + '-' + Date.now() + fileObj[file.mimetype]);
+    }
+  }
+});
+
 var upload = multer({
-  dest: __dirname + '../public/uploads/',
+  storage: storage,
   limits: { fileSize: 1000000, files: 1 }
 });
 
