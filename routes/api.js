@@ -7,7 +7,7 @@ var admin = require('firebase-admin');
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, appRoot + '/public/uploads/');
+    cb(null, __dirname + '/public/uploads/');
   },
   filename: function (req, file, cb) {
     var fileObj = {
