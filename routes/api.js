@@ -51,7 +51,7 @@ router.post('/getuser', function (req, res, next) {
   });
 });
 
-app.post('/profile', upload.single('avatar'), function (req, res, next) {
+router.post('/profile', upload.single('avatar'), function (req, res, next) {
   if (err) {
     return res.json({'error':'error uploading ..'});
   }
