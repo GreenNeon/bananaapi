@@ -8,6 +8,11 @@ body{
     overflow-y: auto;
 }
 
+.header-img{
+    height: 200px;
+    background: #22A7F0;
+}
+
 .container-menu{
     width: 900px;
     margin-left: auto;
@@ -220,6 +225,10 @@ color: grey;
   text-align:center;
   padding: 10px 0px;
   margin-top: 20px;
+}
+.hightlight{
+    background-color: #22A7F0;
+    text-align: center;
 }
 .tipe{
   padding: 30px 0px;

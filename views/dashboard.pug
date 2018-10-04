@@ -1,0 +1,60 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  link(rel='stylesheet' href='/stylesheets/bulma.min.css')
+  link(rel='stylesheet' href='/stylesheets/style.css')
+  title Dashboard: Kampusverse
+.container.title_hightlight
+  h1.title.has-text-white Dashboard: Kampusverse
+  h2.subtitle.has-text-danger selamat datang di admin center.
+.container(style='padding-top: 2em;overflow:scroll;')
+    table.table.is-hoverable.is-stripped.is-fullwidth
+        thead
+            tr
+            th
+                abbr(title='ID') ID
+            th
+                abbr(title='Nama') Nama
+            th
+                abbr(title='Email') Email
+            th
+                abbr(title='Password') Password
+            th
+                abbr(title='Verified') Verified
+            th
+                abbr(title='Component') Component
+            th
+                abbr(title='Action') Action
+        tfoot
+            tr
+            th
+                abbr(title='ID') ID
+            th
+                abbr(title='Nama') Nama
+            th
+                abbr(title='Email') Email
+            th
+                abbr(title='Password') Password
+            th
+                abbr(title='Verified') Verified
+            th
+                abbr(title='Component') Component
+            th
+                abbr(title='Action') Action
+        tbody
+            each val in users
+                tr
+                    th #{val.uid}
+                    td
+                        strong #{val.displayName}
+                    td #{val.email}
+                    td #{val.passwordHash}
+                    td #{val.emailVerified}
+                    td
+                        a.button.is-outlined Jadwal
+                        a.button.is-outlined Tugas
+                        a.button.is-outlined Uang
+                    td
+                        a.button.is-primary Lihat
