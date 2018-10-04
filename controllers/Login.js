@@ -168,12 +168,6 @@ exports.UpdateUserData = function(token, displayName, photoUrl, callback){
    postData.returnSecureToken = true;
    postData.idToken = token;
    
-   if(!displayName) postData.deleteAttribute = "DISPLAY_NAME";
-   else postData.displayName = displayName;
-
-   if(!photoUrl) postData.deleteAttribute = "PHOTO_URL";
-   else postData.photoUrl = photoUrl;
-
    var url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/setAccountInfo?key=' + API_KEY;
    var options = {
        method: 'post',

@@ -6,7 +6,7 @@ var multer = require('multer');
 var admin = require('firebase-admin');
 var fs = require('fs');
 
-if(!fs.existsSync(appRoot + '/public/uploads/')){
+if (!fs.existsSync(appRoot + '/public/uploads/')) {
   fs.mkdir(appRoot + '/public/uploads/');
 }
 
@@ -87,7 +87,7 @@ router.post('/profile', upload.single('avatar'), function (req, res, next) {
   admin.auth().updateUser(req.body.uid, {
     photoURL: "https://kampusbanana.herokuapp.com/uploads/" + req.file.filename,
   })
-    .then(function(userRecord) {
+    .then(function (userRecord) {
       // See the UserRecord reference doc for the contents of userRecord.
       console.log("Successfully updated user", userRecord.toJSON());
       return res.json({
@@ -96,12 +96,23 @@ router.post('/profile', upload.single('avatar'), function (req, res, next) {
         'folder': req.file.destination,
       });
     })
-    .catch(function(error) {
+    .catch(function (error) {
       console.log("Error updating user:", error);
       return res.json({
         'error': 'File uploaded sucessfully! But ERROR!!.',
         'data': error
       });
+    });
+});
+
+router.get('/testuser', function (req, res, next) {
+  admin.auth().getUser('jVB0SuN23sTmfKYlpVh1DiU7gf03')
+    .then(function (userRecord) {
+      // See the UserRecord reference doc for the contents of userRecord.
+      console.log("Successfully fetched user data:", userRecord.toJSON());
+    })
+    .catch(function (error) {
+      console.log("Error fetching user data:", error);
     });
 
 });
