@@ -14,6 +14,8 @@ head
         thead
             tr
             th
+                abbr(title='Foto') Foto
+            th
                 abbr(title='ID') ID
             th
                 abbr(title='Nama') Nama
@@ -29,6 +31,8 @@ head
                 abbr(title='Action') Action
         tfoot
             tr
+            th
+                abbr(title='Foto') Foto
             th
                 abbr(title='ID') ID
             th
@@ -46,6 +50,8 @@ head
         tbody
             each val in users
                 tr
+                    td 
+                        img(src=val.photoURL, alt="", srcset="")
                     th #{val.uid}
                     td
                         strong #{val.displayName}
@@ -53,8 +59,8 @@ head
                     td #{val.passwordHash}
                     td #{val.emailVerified}
                     td
-                        a.button.is-outlined Jadwal
-                        a.button.is-outlined Tugas
-                        a.button.is-outlined Uang
+                        a.button.is-outlined(href="/jadwal/#{val.uid}") Jadwal
+                        a.button.is-outlined(href="/tugas/#{val.uid}") Tugas
+                        a.button.is-outlined(href="/uang/#{val.uid}") Uang
                     td
                         a.button.is-primary Lihat

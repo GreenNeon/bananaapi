@@ -50,14 +50,11 @@ router.get('/dashboard', function (req, res, next) {
          //console.log("user", userRecord.toJSON());
          users.push(userRecord.toJSON());
        });
-       console.log('total;', users[1]);
 
        return res.render('dashboard', { users:  users});
        // List next batch of users.
         //listAllUsers(listUsersResult.pageToken);
      }
-     console.log('total;', users.length);
-
    })
    .catch(function (error) {
      var users = [];
